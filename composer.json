@@ -1,0 +1,11 @@
+{
+    "name": "ashkanfekri/php-pdo-connector",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
