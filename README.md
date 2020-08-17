@@ -11,7 +11,7 @@ composer require php-pdo-connector
 
 ```php
 define('DB_HOST', 'db_host'); // localhost or 127.0.0.1
-define('DB_USER', 'db_user'); // test
+define('DB_USER', 'db_user'); // root
 define('DB_PASS', 'db_pass'); // null or '' for local develop
 define('DB_NAME', 'table_name'); // your db table name
 ```
