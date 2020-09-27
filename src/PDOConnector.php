@@ -74,6 +74,33 @@ class PDOConnector
     return $this;
   }
 
+    /**
+   * @param $param
+   * @param $value
+   * @param null $type
+   * @return none
+   */
+  public function bindNotReturn($param, $value, $type = null)
+  {
+    if (is_null($type)) {
+
+      switch (true) {
+        case is_int($value):
+          $type = PDO::PARAM_INT;
+          break;
+        case is_bool($value):
+          $type = PDO::PARAM_BOOL;
+          break;
+        case is_null($value):
+          $type = PDO::PARAM_NULL;
+          break;
+        default:
+          $type = PDO::PARAM_STR;
+      }
+    }
+    $this->result->bindValue($param, $value, $type);
+  }
+
   /**
    * Fetch a single row as a result of a query.
    * @return mixed
