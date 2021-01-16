@@ -18,7 +18,7 @@ class PDOConnector
 
     private static $instance;
 
-    public function getInstance()
+    public static function getInstance()
     {
         self::$instance = self::$instance ?? new self();
         return self::$instance;

@@ -20,8 +20,8 @@ define('DB_NAME', 'table_name'); // your db table name
 
 ```php
 use Ashkanfekri\dodo\PDOConnector;
-// create new object from this class
-$db = new PDOConnector();
+// create a instance from this class
+$db = PDOConnector::getInstance();
 ```
 --- 
 
